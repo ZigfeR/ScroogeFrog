@@ -1,0 +1,134 @@
+.header {
+  display: flex;
+  align-items: flex-start;
+}
+.header .header-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 12px 50px;
+  box-shadow: 0px 4px 20px 0px rgba(239, 239, 239, 0.44);
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 944px) {
+  .header .header-container {
+    flex-wrap: wrap;
+    padding: 12px 25px;
+  }
+}
+.header .header-container .header-left {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  user-select: none;
+  color: var(--colors-text, rgb(65, 70, 72));
+  font-size: 24px;
+  line-height: 36px;
+  text-align: left;
+}
+.header .header-container .header-left .header-logo {
+  object-fit: contain;
+  width: 70px;
+}
+.header .header-container .menu {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+@media (max-width: 944px) {
+  .header .header-container .menu {
+    width: 100%;
+    justify-content: center;
+  }
+}
+.header .header-container .menu .header__ul {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+}
+.header .header-container .menu .header__ul .header__list {
+  position: relative;
+}
+.header .header-container .menu .header__ul .header__list .header__link {
+  display: flex;
+  gap: 4px;
+  font-size: 18px;
+  line-height: 27px;
+}
+.header .header-container .menu .header__ul .header__list .header__link:not(.header__sub-link) {
+  text-wrap: nowrap;
+}
+.header .header-container .menu .header__ul .header__list .header__link:hover, .header .header-container .menu .header__ul .header__list .header__link.active {
+  color: var(--link-hover, #81bd52);
+}
+.header .header-container .menu .header__ul .header__list .header__link.arrow::after {
+  content: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L11.7735 0H0.226497L6 10ZM5 0V1H7V0H5Z" fill="%23414648"/></svg>');
+  transition: transform 0.5s ease;
+}
+.header .header-container .menu .header__ul .header__list .header__link.arrow.active::after, .header .header-container .menu .header__ul .header__list .header__link.arrow:hover::after {
+  content: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L11.7735 0H0.226497L6 10ZM5 0V1H7V0H5Z" fill="%2381bd52"/></svg>');
+}
+.header .header-container .menu .header__ul .header__list .header__link.arrow:hover::after {
+  transform: rotate(180deg);
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu {
+  display: none;
+  flex-wrap: wrap;
+  position: absolute;
+  left: 50%;
+  top: 52px;
+  gap: 16px;
+  padding: 16px;
+  min-width: 660px;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border: 1px solid rgba(128, 189, 81, 0.2);
+  border-radius: 22px;
+  box-shadow: 0px 0px 40px 0px rgba(207, 207, 207, 0.25);
+  z-index: 10;
+}
+@media (max-width: 944px) {
+  .header .header-container .menu .header__ul .header__list .header__sub-menu {
+    transform: translateX(-25%);
+  }
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list {
+  display: flex;
+  flex: 1 1 calc(50% - 60px);
+  min-width: 260px;
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list .header__sub-link {
+  gap: 16px;
+  padding: 16px;
+  border-radius: 22px;
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list .header__sub-link:hover {
+  color: unset;
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list .header__sub-link .sub-list__right {
+  flex-direction: column;
+  display: flex;
+  gap: 8px;
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list .header__sub-link .sub-list__right .sub-list-name {
+  position: relative;
+  font-size: 18px;
+  line-height: 27px;
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list .header__sub-link .sub-list__right .sub-list-name svg {
+  position: absolute;
+  left: -14px;
+  top: -8px;
+  z-index: 0;
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list .header__sub-link .sub-list__bottom {
+  display: flex;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.header .header-container .menu .header__ul .header__list .header__sub-menu .header__sub-list .header__sub-link:hover {
+  background-color: rgb(247, 247, 247);
+}/*# sourceMappingURL=Header.css.map */
