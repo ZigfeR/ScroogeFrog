@@ -1,6 +1,8 @@
 .header {
   display: flex;
   align-items: flex-start;
+  user-select: none;
+  background: var(--colors-white, rgb(255, 255, 255));
 
   .header-container {
     display: flex;
@@ -21,7 +23,6 @@
       display: flex;
       gap: 12px;
       align-items: center;
-      user-select: none;
 
       color: var(--colors-text, rgb(65, 70, 72));
 
