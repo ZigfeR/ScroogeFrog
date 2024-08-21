@@ -362,6 +362,7 @@ ul {
 :root {
   ---width: 1500px;
   --bg-color: rgb(119, 119, 119);
+  --footer-bg-color: rgb(65, 70, 72);
   ---black: #2b2b2b;
   --colors-white: rgb(255, 255, 255);
   --colors-text: rgb(65, 70, 72);

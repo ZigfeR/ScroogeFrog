@@ -14,7 +14,7 @@
     justify-content: space-between;
     gap: 10px;
 
-    @media (max-width: 944px) {
+    @media (max-width: 1020px) {
       flex-wrap: wrap;
       padding: 12px 25px;
     }
@@ -41,7 +41,7 @@
       align-items: center;
       height: 100%;
 
-      @media (max-width: 944px) {
+      @media (max-width: 1020px) {
         width: 100%;
         justify-content: center;
       }
