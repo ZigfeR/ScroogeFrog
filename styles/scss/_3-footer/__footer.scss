@@ -159,7 +159,7 @@
 
               .footer__link {
                 font-size: 16px;
-                color: rgb(255, 255, 255);
+                color: var(--colors-white, rgb(255, 255, 255));
                 font-weight: 500;
                 line-height: 24px;
                 text-align: left;
