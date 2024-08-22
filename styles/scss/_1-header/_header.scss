@@ -4,13 +4,13 @@
   user-select: none;
   background: var(--colors-white, rgb(255, 255, 255));
 
-  @media (max-width: 719px) {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-  }
+  // @media (max-width: 719px) {
+  //   position: fixed;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   z-index: 10;
+  // }
 
   .header-left-container {
     display: flex;
