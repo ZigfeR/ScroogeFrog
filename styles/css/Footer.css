@@ -50,10 +50,17 @@
 }
 @media (max-width: 1279px) {
   .footer .footer-container .footer-copyright-mobile {
+    margin-top: 20px;
     display: block;
     text-align: center;
     width: 100%;
     order: 5;
+  }
+}
+@media (max-width: 719px) {
+  .footer .footer-container .footer-copyright-mobile {
+    margin-top: unset;
+    width: unset;
   }
 }
 .footer .footer-container .footer-container-row {
