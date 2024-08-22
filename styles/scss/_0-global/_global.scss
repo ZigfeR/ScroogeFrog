@@ -14,11 +14,11 @@ html {
   }
 
   &::-webkit-scrollbar-track {
-    background: var(--bg-color, #f5f5f5); /* Цвет дорожки */
+    background: var(--bg-color, rgb(245, 245, 245)); /* Цвет дорожки */
   }
 
   &::-webkit-scrollbar-thumb {
-    background: var(--colors-green-500-primary, #2ea84f);
+    background: var(--link-hover, rgb(129, 189, 82));
     /* Цвет бегунка */
     // border-radius: 20px; /* Округление бегунка */
     // border: 3px solid var(--colors-white, #fff); /* Оформление границ бегунка */
@@ -37,6 +37,7 @@ button {
 
 body {
   background: var(--bg-color, #f5f5f5);
+  position: relative;
 }
 
 img,
@@ -63,9 +64,51 @@ ul {
 
 .content-container {
   width: min(95%, var(---width, 1366px));
+  padding: 50px;
 
   @media (max-width: 719px) {
-    width: min(93%, var(---width, 1366px));
+    // width: min(93%, var(---width, 1366px));
+    width: calc(100% - 50px);
+    padding: 50px 25px;
+  }
+}
+
+.content::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="999.598" height="1465" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><path d="m451.39,-36.15l59.46,35.41l-430.07,731.73l-80.34,0l450.95,-767.14z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 122"/><path d="m450.95,1498.28l59.45,-35.41l-430.07,-731.73l-80.33,0l450.95,767.14z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 127"/><path d="m610.28,-37l59.46,35.4l-430.08,731.74l-80.33,0l450.95,-767.14z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 123"/><path d="m609.84,1497.06l59.45,-35.4l-430.07,-731.74l-80.34,0l450.96,767.14z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 128"/><path d="m774.07,-34.76l59.46,35.41l-430.08,731.73l-80.33,0l450.95,-767.14z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 124"/><path d="m773.63,1499l59.45,-35.41l-430.07,-731.74l-80.34,0l450.96,767.15z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 129"/><path d="m940.09,-34.76l59.45,35.41l-430.07,731.73l-80.33,0l450.95,-767.14z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 125"/><path d="m939.65,1498.96l59.45,-35.4l-430.07,-731.74l-80.34,0l450.96,767.14z" fill="%23E6F2DC" fill-opacity="1" fill-rule="nonzero" id="Rectangle 130"/></svg>');
+  background-repeat: repeat-y;
+  background-position: calc(100% + 300px) 0;
+  pointer-events: none;
+  /*   background-size: cover; */
+  z-index: -1; /* Для отправки фона за контент */
+
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+.content-2::after {
+  content: "";
+  position: absolute;
+  top: 23%;
+  left: -40%;
+  width: 100%;
+  height: 77%;
+  background-image: url('data:image/svg+xml;utf8,<svg width="999.598" height="1600" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"><path d="m548.19,31.85l-59.45,35.41l430.07,731.73l80.34,0l-450.96,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 122"/><path d="m548.64,1566.28l-59.45,-35.41l430.07,-731.73l80.33,0l-450.95,767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 127"/><path d="m389.31,31l-59.46,35.4l430.08,731.74l80.33,0l-450.95,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 123"/><path d="m389.75,1565.06l-59.45,-35.4l430.07,-731.74l80.34,0l-450.96,767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 128"/><path d="m225.52,34.24l-59.46,35.41l430.08,731.73l80.33,0l-450.95,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 124"/><path d="m225.96,1568l-59.45,-35.41l430.07,-731.74l80.34,0l-450.96,767.15z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 129"/><path d="m59.5,33.24l-59.46,35.41l430.08,731.73l80.33,0l-450.95,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 125"/><path d="m59.94,1566.96l-59.45,-35.4l430.07,-731.74l80.34,0l-450.96,767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="Rectangle 130"/><path d="m468.15,-105.57l-59.45,35.41l430.07,731.73l80.34,0l-450.96,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_1"/><path d="m304.15,-113.57l-59.45,35.41l430.07,731.73l80.34,0l-450.96,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_2"/><path d="m146.15,-100.57l-59.45,35.41l430.07,731.73l80.34,0l-450.96,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_3"/><path d="m-61.85,-174.57l-59.45,35.41l430.07,731.73l80.34,0l-450.96,-767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_4"/><path d="m-21.06,1704.96l-59.45,-35.4l430.07,-731.74l80.34,0l-450.96,767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_5"/><path d="m131.94,1727.96l-59.45,-35.4l430.07,-731.74l80.34,0l-450.96,767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_6"/><path d="m310.94,1698.96l-59.45,-35.4l430.07,-731.74l80.34,0l-450.96,767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_7"/><path d="m442.94,1744.96l-59.45,-35.4l430.07,-731.74l80.34,0l-450.96,767.14z" fill="%23E6F2DC" fill-rule="nonzero" id="svg_8"/></svg>');
+  background-repeat: no-repeat;
+  // background-position: calc(-100% + -100px) 0px;
+  pointer-events: none;
+
+  /*   background-size: cover; */
+  z-index: -1; /* Для отправки фона за контент */
+
+  @media (max-width: 719px) {
+    display: none;
   }
 }
 

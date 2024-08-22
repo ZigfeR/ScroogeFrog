@@ -86,6 +86,7 @@ $(document).ready(function () {
         if ($this.hasClass("active")) {
           $this.removeClass("active").addClass("deactivating");
           $menu.slideUp(500); // Анимация сворачивания меню
+          $("html").removeClass("no-scroll");
 
           // Закрываем активное подменю, если оно открыто
           if ($activeSubMenu.length) {
@@ -94,6 +95,7 @@ $(document).ready(function () {
         } else {
           $this.removeClass("deactivating").addClass("active");
           $menu.slideDown(500).css("display", "flex"); // Анимация разворачивания меню
+          $("html").addClass("no-scroll");
         }
       });
 

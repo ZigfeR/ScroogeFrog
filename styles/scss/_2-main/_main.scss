@@ -1,2 +1,6 @@
 .common-template {
+  display: flex;
+  flex-direction: column;
+
+  @import "../_2-main/home";
 }
