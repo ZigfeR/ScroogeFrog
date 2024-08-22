@@ -1,20 +1,3 @@
-// $(document).ready(function () {
-//   // При наведении курсора на ссылку с классом 'services arrow'
-//   $("a.header__link.services.arrow").hover(
-//     function () {
-//       // Раскрываем подменю с анимацией slideDown
-//       $(this)
-//         .siblings("ul.header__sub-menu")
-//         .stop(true, true)
-//         .slideDown(300)
-//         .css("display", "flex");
-//     },
-//     function () {
-//       // Сворачиваем подменю с анимацией slideUp
-//       $(this).siblings("ul.header__sub-menu").stop(true, true).slideUp(300);
-//     }
-//   );
-// });
 $(document).ready(function () {
   // Защита от копирования изображений
   $("img").on("contextmenu", function (e) {
@@ -67,5 +50,47 @@ $(document).ready(function () {
         });
       }, 300); // Задержка перед закрытием
     });
+  }
+
+  if ($(window).width() < 720) {
+    // Обработчик для главного элемента меню
+    $(".header-container__crosshair").on("click", function () {
+      var $this = $(this);
+      var $menu = $(".header-menu.menu-mobile");
+      var $activeSubMenu = $(".header__sub-menu-container:visible");
+
+      if ($this.hasClass("active")) {
+        $this.removeClass("active").addClass("deactivating");
+        $menu.slideUp(500); // Анимация сворачивания меню
+
+        // Закрываем активное подменю, если оно открыто
+        if ($activeSubMenu.length) {
+          $activeSubMenu.slideUp(500).prev().removeClass("active"); // Скрываем подменю и удаляем класс active у ссылки
+        }
+      } else {
+        $this.removeClass("deactivating").addClass("active");
+        $menu.slideDown(500).css("display", "flex"); // Анимация разворачивания меню
+      }
+    });
+
+    // Обработчик для ссылок внутри меню
+    $(".header-menu.menu-mobile").on(
+      "click",
+      ".header__link.services.arrow",
+      function (e) {
+        e.preventDefault(); // Отменить действие по умолчанию для ссылки
+
+        var $this = $(this);
+        var $subMenu = $this.next(".header__sub-menu-container"); // Найти следующее подменю
+
+        if ($this.hasClass("active")) {
+          $this.removeClass("active");
+          $subMenu.slideUp(500); // Анимация сворачивания подменю
+        } else {
+          $this.addClass("active");
+          $subMenu.slideDown(500); // Анимация разворачивания подменю
+        }
+      }
+    );
   }
 });
