@@ -215,6 +215,7 @@
   font-weight: 400;
   line-height: 27px;
   text-align: left;
+  text-wrap: nowrap;
 }
 .footer .footer-container .footer-container-row.contacts .footer__phone-details .footer__contact-span .footer__contact-link:hover {
   color: var(--link-hover, rgb(129, 189, 82));

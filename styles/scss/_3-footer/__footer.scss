@@ -218,6 +218,7 @@
               font-weight: 400;
               line-height: 27px;
               text-align: left;
+              text-wrap: nowrap;
 
               &:hover {
                 color: var(--link-hover, rgb(129, 189, 82));
