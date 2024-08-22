@@ -176,9 +176,6 @@
   }
 }
 @media (max-width: 719px) {
-  .common-template .about-list-tab .about-list-tab-container .about-list-box .arrow-box {
-    display: unset;
-  }
   .common-template .about-list-tab .about-list-tab-container .about-list-box .arrow-box.desk {
     opacity: 0;
   }
