@@ -401,7 +401,7 @@ ul {
   /*   background-size: cover; */
   z-index: -1; /* Для отправки фона за контент */
 }
-@media (max-width: 719px) {
+@media (max-width: 1090px) {
   .content-r::after {
     display: none;
   }
