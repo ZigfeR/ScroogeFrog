@@ -179,15 +179,19 @@ $(document).ready(function () {
       if (windowWidth > 1024) {
         $(".common-template.services").css("height", "unset");
         $(".services-drop").fadeIn().css("display", "flex");
+        $(".services-tab__drop-btn").css("display", "none");
       } else if (windowWidth > 850) {
         $(".common-template.services").css("height", "unset");
         $(".services-drop").slideDown().css("display", "flex");
+        $(".services-tab__drop-btn").css("display", "none");
       } else if (windowWidth > 719) {
         $(".common-template.services").css("height", "unset");
         $(".services-drop").fadeIn().css("display", "flex");
+        $(".services-tab__drop-btn").css("display", "none");
       } else {
         $(".common-template.services").css("height", "unset");
         $(".services-drop").slideDown().css("display", "flex");
+        $(".services-tab__drop-btn").css("display", "none");
       }
     });
   }
@@ -203,4 +207,38 @@ $(document).ready(function () {
     adjustBgFillHeight();
     teamBgFillHeight();
   });
+});
+
+window.addEventListener("DOMContentLoaded", function () {
+  function handleHashChange() {
+    const hash = window.location.hash; // Получаем хэш из URL
+    if (hash) {
+      const targetElement = $(hash); // Находим элемент с этим id
+
+      if (targetElement.length) {
+        // Сначала раскрываем скрытый блок
+        $(".services-drop").fadeIn().css("display", "flex");
+        $(".common-template.services").css("height", "unset");
+        // Показываем целевой элемент
+        targetElement.css("display", "block");
+        $(".services-tab__drop-btn").css("display", "none");
+
+        // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
+        setTimeout(() => {
+          $("html, body").animate(
+            {
+              scrollTop: targetElement.offset().top,
+            },
+            200
+          );
+        }, 100);
+      }
+    }
+  }
+
+  // Вызовем функцию при загрузке страницы
+  handleHashChange();
+
+  // Отслеживаем изменения хэша
+  window.addEventListener("hashchange", handleHashChange);
 });
