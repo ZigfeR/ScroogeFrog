@@ -215,23 +215,51 @@ window.addEventListener("DOMContentLoaded", function () {
     if (hash) {
       const targetElement = $(hash); // Находим элемент с этим id
 
-      if (targetElement.length) {
-        // Сначала раскрываем скрытый блок
-        $(".services-drop").fadeIn().css("display", "flex");
-        $(".common-template.services").css("height", "unset");
-        // Показываем целевой элемент
-        targetElement.css("display", "block");
-        $(".services-tab__drop-btn").css("display", "none");
+      if ($(window).width() < 720) {
+        if (targetElement.length) {
+          // Сначала раскрываем скрытый блок
+          $(".header__link.services.arrow").removeClass("active");
+          $(".header__sub-menu-container").slideUp(500); // Анимация сворачивания меню
+          $(".header-menu.menu-mobile").slideUp(500); // Анимация сворачивания меню
+          $(".header-container__crosshair")
+            .removeClass("active")
+            .addClass("deactivating");
+          $("html").removeClass("no-scroll");
+          $(".services-drop").fadeIn().css("display", "flex");
+          $(".common-template.services").css("height", "unset");
+          // Показываем целевой элемент
+          targetElement.css("display", "block");
+          $(".services-tab__drop-btn").css("display", "none");
 
-        // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
-        setTimeout(() => {
-          $("html, body").animate(
-            {
-              scrollTop: targetElement.offset().top,
-            },
-            200
-          );
-        }, 100);
+          // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
+          setTimeout(() => {
+            $("html, body").animate(
+              {
+                scrollTop: targetElement.offset().top,
+              },
+              200
+            );
+          }, 100);
+        }
+      } else {
+        if (targetElement.length) {
+          // Сначала раскрываем скрытый блок
+          $(".services-drop").fadeIn().css("display", "flex");
+          $(".common-template.services").css("height", "unset");
+          // Показываем целевой элемент
+          targetElement.css("display", "block");
+          $(".services-tab__drop-btn").css("display", "none");
+
+          // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
+          setTimeout(() => {
+            $("html, body").animate(
+              {
+                scrollTop: targetElement.offset().top,
+              },
+              200
+            );
+          }, 100);
+        }
       }
     }
   }
