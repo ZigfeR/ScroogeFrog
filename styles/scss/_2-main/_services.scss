@@ -59,6 +59,10 @@
           font-size: 18px;
           line-height: 180%;
           text-align: justify;
+
+          @media (max-width: 850px) {
+            font-size: 16px;
+          }
         }
 
         .services-tab__drop-btn {

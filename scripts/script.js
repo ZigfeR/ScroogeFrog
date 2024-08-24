@@ -136,8 +136,24 @@ $(document).ready(function () {
     handleMobileMenu();
     handleSubmenu();
     adjustBgFillHeight();
+    teamBgFillHeight();
   });
 
+  function teamBgFillHeight() {
+    var headerHeight = $(".header").outerHeight();
+    var footerHeight = $(".footer").outerHeight();
+    var windowHeight = $(window).height();
+    var windowWidth = $(window).width(); // Получаем ширину окна
+
+    if (windowWidth > 1280) {
+      // Условие для ширины больше 1024px
+      var bgFillHeight = windowHeight - headerHeight - footerHeight;
+      $(".common-template.team").css("height", bgFillHeight + "px");
+    } else {
+      var bgFillHeight = windowHeight - headerHeight - footerHeight;
+      $(".common-template.team").css("height", "unset");
+    }
+  }
   function adjustBgFillHeight() {
     var headerHeight = $(".header").outerHeight();
     var footerHeight = $(".footer").outerHeight();
@@ -178,11 +194,13 @@ $(document).ready(function () {
 
   // Adjust height on page load
   adjustBgFillHeight();
+  teamBgFillHeight();
 
   // Вызов функции при изменении размера окна
   $(window).on("resize", function () {
     handleMobileMenu();
     handleSubmenu();
     adjustBgFillHeight();
+    teamBgFillHeight();
   });
 });
