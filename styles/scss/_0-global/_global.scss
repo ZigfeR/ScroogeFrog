@@ -78,6 +78,28 @@ ul {
   }
 }
 
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 1.125rem 2rem;
+  background: var(--link-hover, rgb(129, 189, 82));
+  border: none;
+  border-radius: 1.1875rem;
+  transition: background 0.3s ease 0s;
+
+  &:hover {
+    background: var(--btn-hover, rgb(112, 185, 56));
+  }
+
+  &,
+  &:active,
+  &:visited {
+    color: var(--colors-white, rgb(255, 255, 255));
+  }
+}
+
 .content {
   &::after {
     content: "";

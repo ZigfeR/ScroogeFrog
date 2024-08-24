@@ -68,7 +68,7 @@
     animation: none;
   }
   .header .header-container .header-container__crosshair.active .line {
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 1;
   }
   .header .header-container .header-container__crosshair.active .line-1 {
@@ -122,6 +122,7 @@
   gap: 8px;
   font-size: 18px;
   line-height: 27px;
+  transition: all 0.3s ease;
 }
 .header .header-container .menu .header__ul .header__list .header__link:not(.header__sub-link) {
   text-wrap: nowrap;
@@ -131,7 +132,7 @@
 }
 .header .header-container .menu .header__ul .header__list .header__link.arrow::after {
   content: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L11.7735 0H0.226497L6 10ZM5 0V1H7V0H5Z" fill="%23414648"/></svg>');
-  transition: transform 0.5s ease;
+  transition: transform 0.3s ease;
 }
 .header .header-container .menu .header__ul .header__list .header__link.arrow.active::after, .header .header-container .menu .header__ul .header__list .header__link.arrow:hover::after {
   content: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L11.7735 0H0.226497L6 10ZM5 0V1H7V0H5Z" fill="%2381bd52"/></svg>');
@@ -171,6 +172,7 @@
   gap: 16px;
   padding: 16px;
   border-radius: 22px;
+  transition: all 0.3s ease;
 }
 .header .header-container .menu .header__ul .header__list .header__sub-menu-container .header__sub-menu .header__sub-list .header__sub-link:hover {
   color: unset;
@@ -239,7 +241,7 @@
   }
   .header .header-container .menu-mobile .header__ul .header__list .header__link:not(.header__sub-link).arrow::after {
     content: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L11.7735 0H0.226497L6 10ZM5 0V1H7V0H5Z" fill="%23414648"/></svg>');
-    transition: transform 0.5s ease;
+    transition: transform 0.3s ease;
     transform: translateY(-1px);
   }
   .header .header-container .menu-mobile .header__ul .header__list .header__link:not(.header__sub-link).arrow.active::after {

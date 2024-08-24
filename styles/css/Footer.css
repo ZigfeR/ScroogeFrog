@@ -164,6 +164,7 @@
   line-height: 24px;
   text-align: left;
   width: 100%;
+  transition: all 0.3s ease;
 }
 .footer .footer-container .footer-container-row.navigate .footer-right .footer__ul .footer__list .footer__link:hover {
   color: var(--link-hover, rgb(129, 189, 82));
@@ -217,6 +218,7 @@
   line-height: 27px;
   text-align: center;
   text-wrap: nowrap;
+  transition: all 0.3s ease;
 }
 .footer .footer-container .footer-container-row.contacts .footer__phone-details .footer__contact-span .footer__contact-link:hover {
   color: var(--link-hover, rgb(129, 189, 82));
@@ -263,6 +265,13 @@
   align-items: center;
   justify-content: center;
 }
+.footer .footer-container .footer-container-row.socials .container-row-messengers .messengers__link svg path {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
 .footer .footer-container .footer-container-row.socials .container-row-messengers .messengers__link:hover svg path {
-  opacity: 0.7;
+  opacity: 0.6;
+}
+.footer .footer-container .footer-container-row.socials .container-row-messengers.social .messengers__link:hover svg path {
+  fill: var(--link-hover, rgb(129, 189, 82));
 }/*# sourceMappingURL=Footer.css.map */

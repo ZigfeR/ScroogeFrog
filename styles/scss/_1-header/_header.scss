@@ -79,7 +79,7 @@
 
         &.active {
           .line {
-            transition: all 0.5s ease-in-out;
+            transition: all 0.3s ease-in-out;
             opacity: 1;
           }
 
@@ -142,6 +142,7 @@
             gap: 8px;
             font-size: 18px;
             line-height: 27px;
+            transition: all 0.3s ease;
 
             &:not(.header__sub-link) {
               text-wrap: nowrap;
@@ -155,7 +156,7 @@
             &.arrow {
               &::after {
                 content: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L11.7735 0H0.226497L6 10ZM5 0V1H7V0H5Z" fill="%23414648"/></svg>');
-                transition: transform 0.5s ease;
+                transition: transform 0.3s ease;
               }
 
               &.active,
@@ -206,6 +207,7 @@
                   gap: 16px;
                   padding: 16px;
                   border-radius: 22px;
+                  transition: all 0.3s ease;
 
                   &:hover {
                     color: unset;
@@ -294,7 +296,7 @@
 
                 &::after {
                   content: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 10L11.7735 0H0.226497L6 10ZM5 0V1H7V0H5Z" fill="%23414648"/></svg>');
-                  transition: transform 0.5s ease;
+                  transition: transform 0.3s ease;
                   transform: translateY(-1px);
                 }
 

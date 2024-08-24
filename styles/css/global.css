@@ -368,6 +368,24 @@ ul {
   }
 }
 
+.btn {
+  display: inline-flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  padding: 1.125rem 2rem;
+  background: var(--link-hover, rgb(129, 189, 82));
+  border: none;
+  border-radius: 1.1875rem;
+  transition: background 0.3s ease 0s;
+}
+.btn:hover {
+  background: var(--btn-hover, rgb(112, 185, 56));
+}
+.btn, .btn:active, .btn:visited {
+  color: var(--colors-white, rgb(255, 255, 255));
+}
+
 .content::after {
   content: "";
   position: absolute;
@@ -565,5 +583,6 @@ ul {
   --colors-gray-100: rgb(247, 247, 247);
   --colors-text: rgb(65, 70, 72);
   --link-hover: rgb(129, 189, 82);
+  --btn-hover: rgb(112, 185, 56);
   --colors-green-500-primary: rgb(46, 168, 79);
 }/*# sourceMappingURL=global.css.map */
