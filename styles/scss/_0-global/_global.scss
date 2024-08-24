@@ -71,6 +71,11 @@ ul {
     width: calc(100% - 50px);
     padding: 50px 25px;
   }
+
+  @media (max-width: 370px) {
+    width: calc(100% - 24px);
+    padding: 50px 12px;
+  }
 }
 
 .content {
@@ -86,33 +91,41 @@ ul {
     pointer-events: none;
     /*   background-size: cover; */
     z-index: -1; /* Для отправки фона за контент */
-
-    // @media (max-width: 719px) {
-    //   display: none;
-    // }
   }
 
   &.content-1 {
     &::after {
-      animation: slideIn-1 2s forwards;
+      animation: slideIn-1 3s infinite alternate forwards;
+      @media (max-width: 850px) {
+        animation: slideIn-1-mobile 3s infinite alternate forwards;
+      }
     }
   }
 
   &.content-2 {
     &::after {
-      animation: slideIn-2 2s forwards;
+      animation: slideIn-2 3s infinite alternate forwards;
+      @media (max-width: 850px) {
+        animation: slideIn-2-mobile 3s infinite alternate forwards;
+      }
     }
   }
 
   &.content-3 {
     &::after {
-      animation: slideIn-3 2s forwards;
+      animation: slideIn-3 3s infinite alternate forwards;
+    }
+    @media (max-width: 850px) {
+      display: none;
     }
   }
 
   &.content-4 {
     &::after {
-      animation: slideIn-4 2s forwards;
+      animation: slideIn-4 3s infinite alternate forwards;
+    }
+    @media (max-width: 850px) {
+      display: none;
     }
   }
 }
@@ -122,7 +135,7 @@ ul {
     content: "";
     position: absolute;
     top: 0;
-    left: 0;
+    left: -100px;
     width: 100%;
     height: 100%;
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510.4 1463.6" style="enable-background:new 0 0 510.4 1463.6;" xml:space="preserve"><path class="st0" d="M59.5-35.4L0,0l430.1,731.7h80.3L59.5-35.4z" fill="%23E6F2DC"/><path class="st0" d="M59.5,1498.9L0,1463.5l430.1-731.7h80.3L59.5,1498.9z" fill="%23E6F2DC" /></svg>');
@@ -132,106 +145,154 @@ ul {
 
     /*   background-size: cover; */
     z-index: -1; /* Для отправки фона за контент */
-
-    @media (max-width: 1090px) {
-      display: none;
-    }
   }
 
   &.content-r-1 {
     &::after {
-      animation: slideIn-r-1 2s forwards;
+      animation: slideIn-r-1 3s infinite alternate forwards;
+    }
+
+    @media (max-width: 850px) {
+      display: none;
     }
   }
 
   &.content-r-2 {
     &::after {
-      animation: slideIn-r-2 2s forwards;
+      animation: slideIn-r-2 3s infinite alternate forwards;
+    }
+
+    @media (max-width: 850px) {
+      display: none;
     }
   }
 
   &.content-r-3 {
     &::after {
-      animation: slideIn-r-3 2s forwards;
+      animation: slideIn-r-3 3s infinite alternate forwards;
+
+      @media (max-width: 850px) {
+        animation: slideIn-r-3-mobile 3s infinite alternate forwards;
+      }
     }
   }
 
   &.content-r-4 {
     &::after {
-      animation: slideIn-r-4 2s forwards;
+      animation: slideIn-r-4 3s infinite alternate forwards;
+
+      @media (max-width: 850px) {
+        animation: slideIn-r-4-mobile 3s infinite alternate forwards;
+      }
     }
   }
 }
 
 @keyframes slideIn-1 {
-  from {
+  0% {
     background-position: calc(100% + 250px) 0;
   }
-  to {
+  100% {
     background-position: calc(100% + 0px) 0;
   }
 }
 
 @keyframes slideIn-2 {
-  from {
+  0% {
     background-position: calc(100% + 250px) 0;
   }
-  to {
+  100% {
     background-position: calc(100% + 150px) 0;
   }
 }
 
 @keyframes slideIn-3 {
-  from {
+  0% {
     background-position: calc(100% + 250px) 0;
   }
-  to {
+  100% {
     background-position: calc(100% + 300px) 0;
   }
 }
 
 @keyframes slideIn-4 {
-  from {
+  0% {
     background-position: calc(100% + 250px) 0;
   }
-  to {
+  100% {
     background-position: calc(100% + 450px) 0;
   }
 }
 
 @keyframes slideIn-r-1 {
-  from {
-    background-position: calc(0% - 275px) 500px;
+  0% {
+    background-position: calc(0% - 325px) 950px;
   }
-  to {
-    background-position: calc(0% - 125px) 500px;
+  100% {
+    background-position: calc(0% - 525px) 950px;
   }
 }
 
 @keyframes slideIn-r-2 {
-  from {
-    background-position: calc(0% - 225px) 500px;
+  0% {
+    background-position: calc(0% - 325px) 950px;
   }
-  to {
-    background-position: calc(0% - 275px) 500px;
+  100% {
+    background-position: calc(0% - 375px) 950px;
   }
 }
 
 @keyframes slideIn-r-3 {
-  from {
-    background-position: calc(0% - 275px) 500px;
+  0% {
+    background-position: calc(0% - 325px) 950px;
   }
-  to {
-    background-position: calc(0% - 425px) 500px;
+  100% {
+    background-position: calc(0% - 225px) 950px;
   }
 }
 
 @keyframes slideIn-r-4 {
-  from {
-    background-position: calc(0% - 275px) 500px;
+  0% {
+    background-position: calc(0% - 325px) 950px;
   }
-  to {
-    background-position: calc(0% - 575px) 500px;
+  100% {
+    background-position: calc(0% - 75px) 950px;
+  }
+}
+
+@keyframes slideIn-1-mobile {
+  0% {
+    background-position: calc(100% + 70px) 0;
+  }
+  100% {
+    background-position: calc(100% + 0px) 0;
+  }
+}
+
+@keyframes slideIn-2-mobile {
+  0% {
+    background-position: calc(100% + 70px) 0;
+  }
+  100% {
+    background-position: calc(100% + 135px) 0;
+  }
+}
+
+@keyframes slideIn-r-3-mobile {
+  0% {
+    background-position: calc(0% - 105px) 525px;
+  }
+  100% {
+    background-position: calc(0% - 40px) 525px;
+  }
+}
+
+@keyframes slideIn-r-4-mobile {
+  0% {
+    background-position: calc(0% - 105px) 525px;
+  }
+  100% {
+    background-position: calc(0% - 175px) 525px;
   }
 }
 

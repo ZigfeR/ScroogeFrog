@@ -1,1 +1,30 @@
 @import "../scss/_2-main/main";
+.frog-bg {
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  right: 0%;
+  transform: translateY(-50%);
+  max-width: 555px;
+
+  svg {
+    width: 552px;
+    height: 410px;
+    animation: resizeAnimation 2000ms infinite alternate ease-in-out;
+  }
+
+  @media (max-width: 719px) {
+    display: none;
+  }
+}
+
+@keyframes resizeAnimation {
+  0% {
+    width: 552px;
+    height: 410px;
+  }
+  100% {
+    width: calc(552px - 20%);
+    height: calc(410px - 20%);
+  }
+}

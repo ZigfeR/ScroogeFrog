@@ -1,6 +1,7 @@
 .common-template {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 
   @import "../_2-main/home";
 }
