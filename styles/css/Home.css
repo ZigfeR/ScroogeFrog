@@ -597,6 +597,7 @@
 .common-template .team-tab .team-tab-container .img-top {
   grid-area: img-top;
   position: relative;
+  z-index: 10;
 }
 @media (max-width: 1280px) {
   .common-template .team-tab .team-tab-container .img-top {
@@ -622,6 +623,7 @@
 .common-template .team-tab .team-tab-container .img-bottom {
   grid-area: img-bottom;
   position: relative;
+  z-index: 10;
 }
 @media (max-width: 1280px) {
   .common-template .team-tab .team-tab-container .img-bottom::before {
@@ -641,6 +643,7 @@
 }
 .common-template .team-tab .team-tab-container .img-right {
   grid-area: img-right;
+  z-index: 10;
 }
 @media (max-width: 850px) {
   .common-template .team-tab .team-tab-container .img-right,
@@ -718,6 +721,308 @@
 @media (max-width: 850px) {
   .common-template .team-tab .team-tab-container .team-content .team-tab__p {
     font-size: 16px;
+  }
+}
+.common-template .collaboration-tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+}
+.common-template .collaboration-tab .collaboration-tab-container {
+  display: flex;
+  align-items: flex-start;
+  align-self: stretch;
+  justify-content: space-between;
+  position: relative;
+  gap: 50px;
+}
+@media (max-width: 1270px) {
+  .common-template .collaboration-tab .collaboration-tab-container {
+    flex-direction: column;
+    padding-bottom: 100px;
+    align-items: center;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 35%;
+  gap: 18px;
+}
+@media (max-width: 850px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content {
+    flex: unset;
+    width: 100%;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab__header {
+  margin: 0;
+  padding: 0;
+  color: var(--colors-text, rgb(65, 70, 72));
+  font-size: 67px;
+  font-weight: 700;
+  line-height: 101px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 850px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab__header {
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 60px;
+  }
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab__header {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 100%;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab__header .collaboration-tab__color {
+  color: var(--link-hover, rgb(129, 189, 82));
+  margin-top: -30px;
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab__header .collaboration-tab__color {
+    margin-top: 0px;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab-box {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 850px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab-box {
+    gap: 24px;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab-box .collaboration-tab__p {
+  padding: 0;
+  margin: 0;
+  color: var(--colors-text, rgb(65, 70, 72));
+  opacity: 0.8;
+  font-size: 18px;
+  line-height: 180%;
+  text-align: justify;
+}
+@media (max-width: 850px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-tab-content .collaboration-tab-box .collaboration-tab__p {
+    font-size: 16px;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form {
+  position: relative;
+  width: 660px;
+  box-sizing: border-box;
+  border: 1px solid var(--link-hover-opacity, rgba(129, 189, 82, 0.2));
+  border-radius: 13px;
+  background: var(--bg-color, rgb(255, 255, 255));
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 38px;
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form {
+    width: 100%;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form h2 {
+  color: var(--colors-text, rgb(65, 70, 72));
+  font-size: 28px;
+  font-weight: 600;
+  line-height: 120%;
+  text-align: center;
+  margin: 0;
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form h2 {
+    font-size: 22px;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 10px;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group {
+  position: relative;
+  width: 438px;
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group {
+    width: unset;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group:not(.link) {
+  border-bottom: 1px solid var(--footer-bg-color-opacity, rgba(65, 70, 72, 0.2));
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group:not(.link) label {
+  height: 60px;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link {
+  display: flex;
+  margin: 18px 0;
+  justify-content: center;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control input:checked ~ .control__indicator {
+  background: var(--colors-white, rgb(255, 255, 255));
+  border: 2px solid var(--link-hover, rgb(129, 189, 82));
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control input:checked ~ .control__indicator:after {
+  display: block;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control input:checked ~ .checkbox {
+  background: var(--link-hover, rgb(129, 189, 82));
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control input:disabled ~ .control__indicator {
+  background: #e6e6e6;
+  opacity: 0.6;
+  pointer-events: none;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control .control__indicator {
+  position: absolute;
+  top: 6px;
+  left: -28px;
+  height: 12px;
+  width: 12px;
+  background: var(--colors-white, rgb(255, 255, 255));
+}
+@media (max-width: 420px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control .control__indicator {
+    left: -4px;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control .control__indicator.checkbox {
+  border: 2px solid var(--colors-gray-200, rgb(229, 228, 226));
+  border-radius: 4px;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control .control__indicator:after {
+  content: "";
+  position: absolute;
+  display: none;
+  left: 4px;
+  top: 1px;
+  width: 2px;
+  height: 7px;
+  border: solid var(--colors-white, rgb(255, 255, 255));
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link .control .control__indicator.checkbox:hover {
+  border: 2px solid var(--link-hover, rgb(129, 189, 82));
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link span {
+  font-size: 18px;
+  color: var(--form-color, rgb(160, 163, 163));
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+@media (max-width: 420px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link span {
+    margin-left: 20px;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link span a {
+  color: var(--link-hover, rgb(129, 189, 82));
+  text-decoration: underline;
+  transition: opacity 0.3s ease;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group.link span a:hover {
+  opacity: 0.7;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group label {
+  display: block;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group label svg {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group label svg.svg-comment {
+  top: 55%;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group input, .common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group textarea {
+  width: calc(100% - 75px);
+  border: none;
+  background: transparent;
+  color: var(--form-color, rgb(160, 163, 163));
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group input:focus, .common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group textarea:focus {
+  outline: none;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group input {
+  height: 39px;
+  padding: 10px 15px 10px 60px;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form form .form-group textarea {
+  height: 21px;
+  padding: 19px 15px 19px 60px;
+  resize: none;
+  overflow: hidden;
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form .collaboration-for-container {
+  padding: 60px 110px;
+  border-radius: 13px;
+  backdrop-filter: blur(22px);
+  background: var(--bg-color-opacity, rgba(255, 255, 255, 0.7));
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form .collaboration-for-container {
+    padding: 30px 12px 70px 12px;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form::before, .common-template .collaboration-tab .collaboration-tab-container .collaboration-form::after {
+  content: "";
+  position: absolute;
+  background: rgb(129, 189, 82);
+  border-radius: 10px;
+  top: 2px;
+  height: 105%;
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form::before, .common-template .collaboration-tab .collaboration-tab-container .collaboration-form::after {
+    top: 2px;
+    height: 102%;
+  }
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form::before {
+  left: 30px;
+  width: 50%;
+  z-index: -2;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+.common-template .collaboration-tab .collaboration-tab-container .collaboration-form::after {
+  right: -15px;
+  width: 90%;
+  transform: skewX(4deg);
+  z-index: -1;
+}
+@media (max-width: 720px) {
+  .common-template .collaboration-tab .collaboration-tab-container .collaboration-form::after {
+    right: -6px;
+    transform: skewX(2deg);
   }
 }
 

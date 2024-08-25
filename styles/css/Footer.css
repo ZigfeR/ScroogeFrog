@@ -2,6 +2,8 @@
   display: flex;
   align-items: flex-start;
   background: var(--footer-bg-color, rgb(65, 70, 72));
+  position: relative;
+  z-index: 10;
 }
 .footer .footer-container {
   display: flex;

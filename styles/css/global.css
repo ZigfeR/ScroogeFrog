@@ -397,7 +397,7 @@ ul {
   background-repeat: repeat-y;
   pointer-events: none;
   /*   background-size: cover; */
-  z-index: -1; /* Для отправки фона за контент */
+  z-index: 1; /* Для отправки фона за контент */
 }
 .content.content-1::after {
   animation: slideIn-1 3s infinite alternate forwards;
@@ -443,7 +443,7 @@ ul {
   background-repeat: no-repeat;
   pointer-events: none;
   /*   background-size: cover; */
-  z-index: -1; /* Для отправки фона за контент */
+  z-index: -2; /* Для отправки фона за контент */
 }
 .content-r.content-r-1::after {
   animation: slideIn-r-1 3s infinite alternate forwards;
@@ -577,12 +577,17 @@ ul {
 :root {
   ---width: 1500px;
   --bg-color: rgb(255, 255, 255);
+  --bg-color-opacity: rgb(255, 255, 255, 0.7);
   --footer-bg-color: rgb(65, 70, 72);
+  --footer-bg-color-opacity: rgb(65, 70, 72, 0.2);
+  --form-color: rgb(160, 163, 163);
   ---black: rgb(43, 43, 43);
   --colors-white: rgb(255, 255, 255);
   --colors-gray-100: rgb(247, 247, 247);
+  --colors-gray-200: rgb(229, 228, 226);
   --colors-text: rgb(65, 70, 72);
   --link-hover: rgb(129, 189, 82);
+  --link-hover-opacity: rgb(129, 189, 82, 0.2);
   --btn-hover: rgb(112, 185, 56);
   --colors-green-500-primary: rgb(46, 168, 79);
 }/*# sourceMappingURL=global.css.map */
