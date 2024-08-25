@@ -1,0 +1,270 @@
+.contact-tab {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+
+  .contact-tab-container {
+    display: flex;
+
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: center;
+    position: relative;
+    gap: 0;
+    min-height: 580px;
+
+    .contact-tab-content {
+      display: flex;
+      flex-direction: column;
+      max-width: 600px;
+      gap: 60px;
+      padding: 75px;
+      padding-right: 0;
+      border-radius: 33px 0 0 33px;
+      height: calc(100% - 150px);
+      width: 40%;
+      max-height: 580px;
+      border-right: none;
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+
+      @media (max-width: 850px) {
+        flex: unset;
+        max-width: unset;
+        width: 100%;
+        padding: 0;
+        border-radius: 0;
+        height: unset;
+        align-items: center;
+        gap: 50px;
+        box-shadow: unset;
+      }
+
+      .contact-tab__header-box {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+
+        @media (max-width: 850px) {
+          align-items: center;
+        }
+
+        .contact-tab__header {
+          margin: 0;
+          padding: 0;
+
+          color: var(--link-hover, rgb(129, 189, 82));
+          font-size: 48px;
+          font-weight: 700;
+          line-height: 100%;
+          text-align: left;
+
+          @media (max-width: 850px) {
+            font-size: 40px;
+            font-weight: 700;
+            line-height: 60px;
+          }
+        }
+
+        .contact-tab__header-span {
+          color: var(--colors-text, rgb(65, 70, 72));
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 100%;
+          letter-spacing: 0px;
+          text-align: left;
+
+          @media (max-width: 850px) {
+            text-align: center;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .contact-tab-box {
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+
+        @media (max-width: 850px) {
+          align-items: center;
+          gap: 20px;
+        }
+
+        .contact-container {
+          display: flex;
+          gap: 55px;
+
+          @media (max-width: 1280px) {
+            flex-direction: column;
+          }
+
+          @media (max-width: 850px) {
+            gap: 20px;
+          }
+        }
+
+        .contact__contact-link {
+          display: flex;
+          flex-direction: column;
+
+          @media (max-width: 850px) {
+            align-items: center;
+          }
+
+          &.phone {
+            @media (max-width: 1280px) {
+              max-width: 230px;
+            }
+            .contact-link-span {
+              &.top {
+                &::before {
+                  content: url('data:image/svg+xml;utf8,<svg width="20.004883" height="20.000000" viewBox="0 0 20.0049 20" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path id="Vector" d="M17.21 12.4C16.72 11.94 16.08 11.68 15.42 11.69C14.75 11.69 14.11 11.94 13.63 12.4L12.04 13.75C10.74 13.21 9.56 12.42 8.57 11.42C7.58 10.43 6.79 9.25 6.25 7.95L7.59 6.36C8.05 5.88 8.31 5.24 8.31 4.58C8.31 3.91 8.05 3.27 7.6 2.79C7.6 2.79 6.05 0.78 6.02 0.75C5.55 0.28 4.9 0 4.23 0C3.55 -0.01 2.9 0.25 2.41 0.72L1.45 1.55C-4.99 8.41 11.64 25.04 18.48 18.5L19.24 17.62C19.73 17.14 20 16.48 20 15.8C20 15.11 19.73 14.45 19.24 13.97C19.22 13.95 17.21 12.4 17.21 12.4L17.21 12.4Z" fill="%2381BD52" fill-opacity="1.000000" fill-rule="nonzero"/></svg>');
+                  position: absolute;
+                  top: 1px;
+                  left: -36px;
+
+                  @media (max-width: 850px) {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+          &.email {
+            max-width: 280px;
+
+            .contact-link-span {
+              &.top {
+                &::before {
+                  content: url('data:image/svg+xml;utf8,<svg width="20" height="19" viewBox="0 0 20 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.9617 3.79785L12.9467 10.8129C12.1645 11.5931 11.1048 12.0312 10 12.0312C8.89521 12.0312 7.83552 11.5931 7.05333 10.8129L0.0383333 3.79785C0.0266667 3.92952 0 4.04869 0 4.17952V12.7108C0.00132321 13.8154 0.440735 14.8745 1.22185 15.6556C2.00296 16.4367 3.062 16.8761 4.16667 16.8774H15.8333C16.938 16.8761 17.997 16.4367 18.7782 15.6556C19.5593 14.8745 19.9987 13.8154 20 12.7108V4.17952C20 4.04869 19.9733 3.92952 19.9617 3.79785Z" fill="%2381BD52"/><path d="M11.7685 9.63436L19.3801 2.02186C19.0114 1.41046 18.4913 0.904393 17.8701 0.552471C17.2489 0.200548 16.5474 0.0146459 15.8335 0.0126953H4.16678C3.4528 0.0146459 2.75137 0.200548 2.13014 0.552471C1.50891 0.904393 0.988849 1.41046 0.620117 2.02186L8.23178 9.63436C8.70143 10.1021 9.33727 10.3648 10.0001 10.3648C10.663 10.3648 11.2988 10.1021 11.7685 9.63436Z" fill="%2381BD52"/></svg>');
+                  position: absolute;
+                  top: 3px;
+                  left: -36px;
+
+                  @media (max-width: 850px) {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .contact-link-span {
+          margin-left: 36px;
+          position: relative;
+
+          @media (max-width: 850px) {
+            margin-left: unset;
+          }
+
+          &.top {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 128%;
+
+            @media (max-width: 720px) {
+              font-size: 16px;
+            }
+          }
+
+          &.bottom {
+            color: rgb(0, 0, 0);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 30px;
+
+            @media (max-width: 720px) {
+              font-size: 18px;
+            }
+          }
+        }
+
+        .massenger-container {
+          display: flex;
+          gap: 80px;
+          align-items: center;
+
+          @media (max-width: 1280px) {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 36px;
+          }
+
+          @media (max-width: 850px) {
+            margin-top: 30px;
+            align-items: center;
+          }
+
+          .contact-link-span {
+            &.top {
+              &::before {
+                content: url('data:image/svg+xml;utf8,<svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.6253 25H9.37533C6.50345 25 4.16699 22.6635 4.16699 19.7917V5.20833C4.16699 2.33646 6.50345 0 9.37533 0H15.6253C18.4972 0 20.8337 2.33646 20.8337 5.20833V19.7917C20.8337 22.6635 18.4972 25 15.6253 25ZM9.37533 2.08333C7.65241 2.08333 6.25033 3.48542 6.25033 5.20833V19.7917C6.25033 21.5146 7.65241 22.9167 9.37533 22.9167H15.6253C17.3482 22.9167 18.7503 21.5146 18.7503 19.7917V5.20833C18.7503 3.48542 17.3482 2.08333 15.6253 2.08333H9.37533ZM14.5837 19.7917C14.5837 19.2167 14.117 18.75 13.542 18.75H11.4587C10.8837 18.75 10.417 19.2167 10.417 19.7917C10.417 20.3667 10.8837 20.8333 11.4587 20.8333H13.542C14.117 20.8333 14.5837 20.3667 14.5837 19.7917Z" fill="%2381BD52"/><rect x="4" width="17" height="25" rx="5" fill="%2381BD52"/><rect x="10" y="21" width="5" height="1" rx="0.5" fill="white"/><clipPath id="clip0_196_5910"><rect width="25" height="25" fill="white"/></clipPath></svg>');
+                position: absolute;
+                top: 0px;
+                left: -36px;
+
+                @media (max-width: 850px) {
+                  display: none;
+                }
+              }
+            }
+          }
+
+          .row-messengers {
+            display: flex;
+            gap: 36px;
+
+            position: relative;
+
+            @media (max-width: 1280px) {
+              margin-left: 46px;
+            }
+
+            @media (max-width: 850px) {
+              margin-left: unset;
+            }
+
+            .messengers__link {
+              &:hover {
+                opacity: 0.7;
+              }
+            }
+
+            .row-messengers-svg {
+              position: absolute;
+              top: -17px;
+              right: -13px;
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+
+    .contact-tab-img {
+      width: 60%;
+      max-width: 606px;
+
+      height: calc(100%);
+      border-radius: 0 33px 33px 0;
+      box-shadow: 0px 4px 16px 0px rgba(0, 0, 0, 0.08);
+
+      @media (max-width: 850px) {
+        display: none;
+      }
+
+      img {
+        position: relative;
+        z-index: 10;
+        object-fit: cover;
+        border-radius: 0 33px 33px 0;
+
+        width: 100%;
+        height: calc(100%);
+      }
+    }
+  }
+}

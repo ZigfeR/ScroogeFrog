@@ -303,7 +303,7 @@
         &::after {
           content: "";
           position: absolute;
-          background: rgb(129, 189, 82);
+          background: var(--link-hover, rgb(129, 189, 82));
           border-radius: 10px;
           top: 2px;
           height: 105%;
