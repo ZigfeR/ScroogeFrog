@@ -112,7 +112,7 @@ ul {
     background-repeat: repeat-y;
     pointer-events: none;
     /*   background-size: cover; */
-    z-index: 1; /* Для отправки фона за контент */
+    z-index: -1; /* Для отправки фона за контент */
   }
 
   &.content-1 {

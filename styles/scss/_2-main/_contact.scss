@@ -107,6 +107,7 @@
         .contact__contact-link {
           display: flex;
           flex-direction: column;
+          position: relative;
 
           @media (max-width: 850px) {
             align-items: center;
@@ -147,6 +148,33 @@
                   }
                 }
               }
+            }
+          }
+
+          .contact__contact-link-svg {
+            position: absolute;
+            right: -50px;
+            bottom: -80px;
+            transform: rotate(120deg);
+            width: 90px;
+
+            @media (max-width: 1280px) {
+              right: -110px;
+              bottom: -20px;
+            }
+
+            @media (max-width: 1000px) {
+              right: -50px;
+            }
+
+            @media (max-width: 850px) {
+              right: -150px;
+              bottom: 90px;
+            }
+
+            @media (max-width: 450px) {
+              right: -90px;
+              bottom: 90px;
             }
           }
         }
@@ -258,7 +286,7 @@
 
       img {
         position: relative;
-        z-index: 10;
+        z-index: 3;
         object-fit: cover;
         border-radius: 0 33px 33px 0;
 
