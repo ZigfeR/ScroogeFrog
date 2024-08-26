@@ -158,6 +158,11 @@
               font-weight: 700;
               line-height: 36px;
               text-align: left;
+              transition: all 300ms ease-in-out;
+
+              &:hover {
+                color: rgb(129, 189, 82);
+              }
 
               @media (max-width: 719px) {
                 font-size: 18px;
@@ -213,6 +218,11 @@
 
             .news-tab-link {
               padding: 22px 11px 0 11px;
+              transition: all 300ms ease-in-out;
+
+              &:hover {
+                color: rgb(129, 189, 82);
+              }
             }
           }
         }
@@ -301,6 +311,11 @@
               text-align: left;
               padding: 14px 10px;
               padding-bottom: 0;
+              transition: all 300ms ease-in-out;
+
+              &:hover {
+                color: rgb(129, 189, 82);
+              }
             }
 
             &,
