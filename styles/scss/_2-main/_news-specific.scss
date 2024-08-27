@@ -20,6 +20,7 @@
 
     video,
     img {
+      -o-object-fit: cover;
       object-fit: cover;
       border-radius: 14px;
       width: 100%;
@@ -85,6 +86,9 @@
         display: flex;
         gap: 50px;
         padding: 0 30px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
 
         @media (max-width: 719px) {

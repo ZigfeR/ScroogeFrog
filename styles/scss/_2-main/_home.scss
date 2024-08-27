@@ -78,23 +78,23 @@
 
     align-items: flex-start;
     align-self: stretch;
-    justify-content: center;
+    justify-content: space-between;
     position: relative;
     flex-wrap: wrap;
     gap: 50px 100px;
+
+    @media (max-width: 1280px) {
+      justify-content: center;
+    }
 
     @media (max-width: 1020px) {
       gap: 50px;
     }
 
-    @media (max-width: 850px) {
-      justify-content: center;
-    }
-
     .about-list-box {
       display: flex;
       flex-direction: column;
-      min-width: 350px;
+      min-width: 320px;
       flex: 1 1 calc(33% - 200px);
       max-width: 400px;
 
@@ -181,7 +181,7 @@
           top: 30px;
           left: -100px;
 
-          @media (max-width: 1349px) {
+          @media (max-width: 1280px) {
             display: none;
           }
 
@@ -193,7 +193,7 @@
           top: 10px;
           right: -80px;
 
-          @media (max-width: 1349px) {
+          @media (max-width: 1280px) {
             right: 0;
             left: -90px;
           }
@@ -202,7 +202,7 @@
           top: 10px;
           left: -100px;
 
-          @media (max-width: 1349px) {
+          @media (max-width: 1280px) {
             top: 0px;
 
             left: -90px;

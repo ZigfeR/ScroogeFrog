@@ -18,6 +18,7 @@
 
     video,
     img {
+      -o-object-fit: cover;
       object-fit: cover;
       border-radius: 14px;
     }
@@ -63,6 +64,9 @@
 
         .news-tab-img-data {
           position: absolute;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
           user-select: none;
           top: 15px;
           right: 15px;
@@ -105,6 +109,9 @@
       }
 
       .news-tab-box-status {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         color: rgb(217, 217, 217);
         font-size: 14px;
