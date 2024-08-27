@@ -86,7 +86,7 @@ $(document).ready(function () {
         if ($this.hasClass("active")) {
           $this.removeClass("active").addClass("deactivating");
           $menu.slideUp(500); // Анимация сворачивания меню
-          $("html").removeClass("no-scroll");
+          $("body").removeClass("no-scroll");
 
           // Закрываем активное подменю, если оно открыто
           if ($activeSubMenu.length) {
@@ -95,7 +95,7 @@ $(document).ready(function () {
         } else {
           $this.removeClass("deactivating").addClass("active");
           $menu.slideDown(500).css("display", "flex"); // Анимация разворачивания меню
-          $("html").addClass("no-scroll");
+          $("body").addClass("no-scroll");
         }
       });
 
@@ -116,6 +116,20 @@ $(document).ready(function () {
             $this.addClass("active");
             $subMenu.slideDown(500); // Анимация разворачивания подменю
           }
+        }
+      );
+
+      // Добавляем обработчик для кликов по элементам header__sub-link
+      $(".header-menu.menu-mobile").on(
+        "click",
+        ".header__sub-link",
+        function () {
+          // Удаляем класс no-scroll с body
+          $("body").removeClass("no-scroll");
+
+          // Делаем меню активным и разворачиваем его
+          var $menu = $(".header-menu.menu-mobile");
+          $menu.slideUp(500);
         }
       );
     } else {
@@ -220,11 +234,11 @@ window.addEventListener("DOMContentLoaded", function () {
           // Сначала раскрываем скрытый блок
           $(".header__link.services.arrow").removeClass("active");
           $(".header__sub-menu-container").slideUp(500); // Анимация сворачивания меню
-          $(".header-menu.menu-mobile").slideUp(500); // Анимация сворачивания меню
+          // $(".header-menu.menu-mobile").slideUp(500); // Анимация сворачивания меню
           $(".header-container__crosshair")
             .removeClass("active")
             .addClass("deactivating");
-          $("html").removeClass("no-scroll");
+          // $("body").removeClass("no-scroll");
           $(".services-drop").fadeIn().css("display", "flex");
           $(".common-template.services").css("height", "unset");
           // Показываем целевой элемент
