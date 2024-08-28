@@ -14,8 +14,8 @@
 
     .container-grid {
       display: grid;
-      grid-template-columns: 397px 284px auto auto auto;
-      grid-template-rows: auto auto;
+      grid-template-columns: 397px 252px auto auto auto;
+      grid-template-rows: 284px 284px;
       grid-auto-columns: 1fr;
       gap: 10px 10px;
       grid-auto-flow: row;
@@ -41,7 +41,7 @@
 
       .img-container {
         display: grid;
-        grid-template-columns: 397px 284px;
+        grid-template-columns: 397px 252px;
         grid-template-rows: auto;
         gap: 0px 10px;
         grid-area: img-container;
@@ -142,14 +142,19 @@
       position: relative;
       z-index: 10;
 
-      img {
+      .img-bottom-bg {
+        background-image: url("/images/img-bottom.jpg");
+        background-size: 200%; /* Увеличивает изображение на 150% */
+        background-position: 52% 36%; /* Фокусируется на верхнем левом углу изображения */
+
+        background-repeat: no-repeat; /* Не повторяет изображение */
         width: 397px;
         height: 284px;
         border-radius: 0px 0px 0px 20px;
       }
 
       @media (max-width: 1280px) {
-        img {
+        .img-bottom-bg {
           border-radius: 10px;
         }
 
@@ -165,7 +170,7 @@
 
       @media (max-width: 850px) {
         &,
-        img {
+        .img-bottom-bg {
           width: 235px;
           height: 168px;
         }
@@ -176,21 +181,27 @@
       grid-area: img-right;
       z-index: 10;
 
-      img {
+      .img-right-bg {
+        background-image: url("/images/img-right.jpg");
+        background-size: 200%; /* Увеличивает изображение на 150% */
+        background-position: 53% 32%; /* Фокусируется на верхнем левом углу изображения */
+
+        background-repeat: no-repeat; /* Не повторяет изображение */
+
         width: 252px;
         height: 284px;
         border-radius: 0px 20px 20px 0px;
       }
 
       @media (max-width: 1280px) {
-        img {
+        .img-right-bg {
           border-radius: 10px;
         }
       }
 
       @media (max-width: 850px) {
         &,
-        img {
+        .img-right-bg {
           width: 149px;
           height: 168px;
         }
@@ -198,7 +209,7 @@
 
       @media (max-width: 400px) {
         &,
-        img {
+        .img-right-bg {
           max-width: 235px;
           width: calc(149px + 35%);
         }
