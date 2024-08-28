@@ -150,60 +150,22 @@ $(document).ready(function () {
     handleMobileMenu();
     handleSubmenu();
     adjustBgFillHeight();
-    teamBgFillHeight();
   });
 
-  function teamBgFillHeight() {
-    var headerHeight = $(".header").outerHeight();
-    var footerHeight = $(".footer").outerHeight();
-    var windowHeight = $(window).height();
-    var windowWidth = $(window).width(); // Получаем ширину окна
-
-    if (windowWidth > 1280) {
-      // Условие для ширины больше 1024px
-      var bgFillHeight = windowHeight - headerHeight - footerHeight;
-      $(".common-template.team").css("height", bgFillHeight + "px");
-    } else {
-      var bgFillHeight = windowHeight - headerHeight - footerHeight;
-      $(".common-template.team").css("height", "unset");
-    }
-  }
   function adjustBgFillHeight() {
-    var headerHeight = $(".header").outerHeight();
-    var footerHeight = $(".footer").outerHeight();
-    var windowHeight = $(window).height();
     var windowWidth = $(window).width(); // Получаем ширину окна
-
-    if (windowWidth > 1024) {
-      // Условие для ширины больше 1024px
-      var bgFillHeight = windowHeight - headerHeight - footerHeight;
-      $(".common-template.services").css("height", bgFillHeight + "px");
-    } else if (windowWidth > 850) {
-      $(".common-template.services").css("height", "unset");
-    } else if (windowWidth > 719) {
-      var bgFillHeight = windowHeight - headerHeight - footerHeight;
-
-      $(".common-template.services").css("height", bgFillHeight + "px");
-    } else {
-      var bgFillHeight = windowHeight - headerHeight - footerHeight;
-      $(".common-template.services").css("height", "unset");
-    }
 
     $(".services-tab__drop-btn").on("click", function () {
       if (windowWidth > 1024) {
-        $(".common-template.services").css("height", "unset");
         $(".services-drop").fadeIn().css("display", "flex");
         $(".services-tab__drop-btn").css("display", "none");
       } else if (windowWidth > 850) {
-        $(".common-template.services").css("height", "unset");
         $(".services-drop").slideDown().css("display", "flex");
         $(".services-tab__drop-btn").css("display", "none");
       } else if (windowWidth > 719) {
-        $(".common-template.services").css("height", "unset");
         $(".services-drop").fadeIn().css("display", "flex");
         $(".services-tab__drop-btn").css("display", "none");
       } else {
-        $(".common-template.services").css("height", "unset");
         $(".services-drop").slideDown().css("display", "flex");
         $(".services-tab__drop-btn").css("display", "none");
       }
@@ -212,7 +174,6 @@ $(document).ready(function () {
 
   // Adjust height on page load
   adjustBgFillHeight();
-  teamBgFillHeight();
 
   // Вызов функции при изменении размера окна
   $(window).on("resize", function () {
@@ -240,7 +201,6 @@ window.addEventListener("DOMContentLoaded", function () {
             .addClass("deactivating");
           // $("body").removeClass("no-scroll");
           $(".services-drop").fadeIn().css("display", "flex");
-          $(".common-template.services").css("height", "unset");
           // Показываем целевой элемент
           targetElement.css("display", "block");
           $(".services-tab__drop-btn").css("display", "none");
@@ -259,7 +219,6 @@ window.addEventListener("DOMContentLoaded", function () {
         if (targetElement.length) {
           // Сначала раскрываем скрытый блок
           $(".services-drop").fadeIn().css("display", "flex");
-          $(".common-template.services").css("height", "unset");
           // Показываем целевой элемент
           targetElement.css("display", "block");
           $(".services-tab__drop-btn").css("display", "none");

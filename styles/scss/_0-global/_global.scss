@@ -103,24 +103,26 @@ ul {
   }
 }
 
-.content {
+.content,
+.content-r {
   &::after {
     content: "";
     position: absolute;
-    top: -70px;
-    left: 0;
+    left: 0px;
     width: 100%;
     height: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510.4 1453.9" style="enable-background:new 0 0 510.4 1453.9;" xml:space="preserve"><path class="st0" d="M451-35.1l59.5,35.2l-430.1,727H0L451-35.1z" fill="%23e6f2dc"/><path class="st0" d="M451,1489.2l59.5-35.2l-430.1-727H0L451,1489.2z" fill="%23e6f2dc" /></svg>');
-
-    // background-size: cover;
-    background-repeat: repeat-y;
     pointer-events: none;
-    z-index: -1; /* Для отправки фона за контент */
+  }
+}
 
-    @media (max-width: 850px) {
-      background-size: cover;
-    }
+.content {
+  &::after {
+    top: -30px;
+    background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510.4 1453.9" style="enable-background:new 0 0 510.4 1453.9;" xml:space="preserve"><path class="st0" d="M451-35.1l59.5,35.2l-430.1,727H0L451-35.1z" fill="%23e6f2dc"/><path class="st0" d="M451,1489.2l59.5-35.2l-430.1-727H0L451,1489.2z" fill="%23e6f2dc" /></svg>');
+    background-repeat: repeat-y;
+    background-size: calc(510.4px - 0%) calc(1453px - 0%);
+
+    z-index: -3; /* Для отправки фона за контент */
   }
 
   &.content-1 {
@@ -128,6 +130,10 @@ ul {
       -webkit-animation: slideIn-1 3s infinite alternate forwards;
       animation: slideIn-1 3s infinite alternate forwards;
       @media (max-width: 850px) {
+        -webkit-animation: slideIn-1-tablet 3s infinite alternate forwards;
+        animation: slideIn-1-tablet 3s infinite alternate forwards;
+      }
+      @media (max-width: 720px) {
         -webkit-animation: slideIn-1-mobile 3s infinite alternate forwards;
         animation: slideIn-1-mobile 3s infinite alternate forwards;
       }
@@ -139,6 +145,10 @@ ul {
       -webkit-animation: slideIn-2 3s infinite alternate forwards;
       animation: slideIn-2 3s infinite alternate forwards;
       @media (max-width: 850px) {
+        -webkit-animation: slideIn-2-tablet 3s infinite alternate forwards;
+        animation: slideIn-2-tablet 3s infinite alternate forwards;
+      }
+      @media (max-width: 720px) {
         -webkit-animation: slideIn-2-mobile 3s infinite alternate forwards;
         animation: slideIn-2-mobile 3s infinite alternate forwards;
       }
@@ -149,8 +159,12 @@ ul {
     &::after {
       -webkit-animation: slideIn-3 3s infinite alternate forwards;
       animation: slideIn-3 3s infinite alternate forwards;
+      @media (max-width: 850px) {
+        -webkit-animation: slideIn-3-tablet 3s infinite alternate forwards;
+        animation: slideIn-3-tablet 3s infinite alternate forwards;
+      }
     }
-    @media (max-width: 850px) {
+    @media (max-width: 720px) {
       display: none;
     }
   }
@@ -159,8 +173,12 @@ ul {
     &::after {
       -webkit-animation: slideIn-4 3s infinite alternate forwards;
       animation: slideIn-4 3s infinite alternate forwards;
+      @media (max-width: 850px) {
+        -webkit-animation: slideIn-4-tablet 3s infinite alternate forwards;
+        animation: slideIn-4-tablet 3s infinite alternate forwards;
+      }
     }
-    @media (max-width: 850px) {
+    @media (max-width: 720px) {
       display: none;
     }
   }
@@ -168,19 +186,12 @@ ul {
 
 .content-r {
   &::after {
-    content: "";
-    position: absolute;
     top: 0;
-    left: -100px;
-    width: 100%;
-    height: 100%;
     background-image: url('data:image/svg+xml;utf8,<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 510.4 1463.6" style="enable-background:new 0 0 510.4 1463.6;" xml:space="preserve"><path class="st0" d="M59.5-35.4L0,0l430.1,731.7h80.3L59.5-35.4z" fill="%23e6f2dc"/><path class="st0" d="M59.5,1498.9L0,1463.5l430.1-731.7h80.3L59.5,1498.9z" fill="%23e6f2dc" /></svg>');
     background-repeat: no-repeat;
-    // background-position: calc(-100% + 100px) 0px;
-    pointer-events: none;
+    background-size: calc(510.4px - 0%) calc(1463px - 0%);
 
-    /*   background-size: cover; */
-    z-index: -2; /* Для отправки фона за контент */
+    z-index: -4; /* Для отправки фона за контент */
   }
 
   &.content-r-1 {
@@ -189,7 +200,7 @@ ul {
       animation: slideIn-r-1 3s infinite alternate forwards;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 720px) {
       display: none;
     }
   }
@@ -200,7 +211,7 @@ ul {
       animation: slideIn-r-2 3s infinite alternate forwards;
     }
 
-    @media (max-width: 850px) {
+    @media (max-width: 720px) {
       display: none;
     }
   }
@@ -210,7 +221,7 @@ ul {
       -webkit-animation: slideIn-r-3 3s infinite alternate forwards;
       animation: slideIn-r-3 3s infinite alternate forwards;
 
-      @media (max-width: 850px) {
+      @media (max-width: 720px) {
         -webkit-animation: slideIn-r-3-mobile 3s infinite alternate forwards;
         animation: slideIn-r-3-mobile 3s infinite alternate forwards;
       }
@@ -222,7 +233,7 @@ ul {
       -webkit-animation: slideIn-r-4 3s infinite alternate forwards;
       animation: slideIn-r-4 3s infinite alternate forwards;
 
-      @media (max-width: 850px) {
+      @media (max-width: 720px) {
         -webkit-animation: slideIn-r-4-mobile 3s infinite alternate forwards;
         animation: slideIn-r-4-mobile 3s infinite alternate forwards;
       }
@@ -232,108 +243,144 @@ ul {
 
 @keyframes slideIn-1 {
   0% {
-    background-position: calc(100% + 50px) 0;
+    background-position: calc(100% + 75px) 0;
   }
   100% {
-    background-position: calc(100% - 300px) 0;
+    background-position: calc(100% - 290px) 0;
   }
 }
 
 @keyframes slideIn-2 {
   0% {
-    background-position: calc(100% + 50px) 0;
+    background-position: calc(100% + 75px) 0;
   }
   100% {
-    background-position: calc(100% - 150px) 0;
+    background-position: calc(100% - 115px) 0;
   }
 }
 
 @keyframes slideIn-3 {
   0% {
-    background-position: calc(100% + 50px) 0;
+    background-position: calc(100% + 75px) 0;
   }
   100% {
-    background-position: calc(100% + 0px) 0;
+    background-position: calc(100% + 60px) 0;
   }
 }
 
 @keyframes slideIn-4 {
   0% {
-    background-position: calc(100% + 50px) 0;
+    background-position: calc(100% + 75px) 0;
   }
   100% {
-    background-position: calc(100% + 150px) 0;
+    background-position: calc(100% + 235px) 0;
+  }
+}
+
+@keyframes slideIn-1-tablet {
+  0% {
+    background-position: calc(100% + 175px) 0;
+  }
+  100% {
+    background-position: calc(100% - 190px) 0;
+  }
+}
+
+@keyframes slideIn-2-tablet {
+  0% {
+    background-position: calc(100% + 175px) 0;
+  }
+  100% {
+    background-position: calc(100% - 15px) 0;
+  }
+}
+
+@keyframes slideIn-3-tablet {
+  0% {
+    background-position: calc(100% + 175px) 0;
+  }
+  100% {
+    background-position: calc(100% + 160px) 0;
+  }
+}
+
+@keyframes slideIn-4-tablet {
+  0% {
+    background-position: calc(100% + 175px) 0;
+  }
+  100% {
+    background-position: calc(100% + 335px) 0;
   }
 }
 
 @keyframes slideIn-r-1 {
   0% {
-    background-position: calc(0% - 325px) 950px;
+    background-position: calc(0% - 500px) 700px;
   }
   100% {
-    background-position: calc(0% - 525px) 950px;
+    background-position: calc(0% - 125px) 700px;
   }
 }
 
 @keyframes slideIn-r-2 {
   0% {
-    background-position: calc(0% - 325px) 950px;
+    background-position: calc(0% - 500px) 700px;
   }
   100% {
-    background-position: calc(0% - 375px) 950px;
+    background-position: calc(0% - 275px) 700px;
   }
 }
 
 @keyframes slideIn-r-3 {
   0% {
-    background-position: calc(0% - 325px) 950px;
+    background-position: calc(0% - 550px) 700px;
   }
   100% {
-    background-position: calc(0% - 225px) 950px;
+    background-position: calc(0% - 425px) 700px;
   }
 }
 
 @keyframes slideIn-r-4 {
   0% {
-    background-position: calc(0% - 325px) 950px;
+    background-position: calc(0% - 500px) 700px;
   }
   100% {
-    background-position: calc(0% - 75px) 950px;
+    background-position: calc(0% - 650px) 700px;
   }
 }
 
 @keyframes slideIn-1-mobile {
   0% {
-    background-position: calc(100% + -100px) 0;
+    background-position: calc(100% + 115px) 0;
   }
   100% {
-    background-position: calc(100% + -100px) 0;
+    background-position: calc(100% + 290px) 0;
   }
 }
 
 @keyframes slideIn-2-mobile {
   0% {
-    background-position: calc(100% + 100px) 0;
+    background-position: calc(100% + 115px) 0;
   }
   100% {
-    background-position: calc(100% + 100px) 0;
+    background-position: calc(100% + 115px) 0;
   }
 }
 
-// @keyframes slideIn-r-3-mobile {
-//   0% {
-//     background-position: calc(0% - 105px) 525px;
-//   }
-//   100% {
-//     background-position: calc(0% - 40px) 525px;
-//   }
-// }
+@keyframes slideIn-r-3-mobile {
+  0% {
+    background-position: calc(0% - 350px) 700px;
+  }
+  100% {
+    background-position: calc(0% - 200px) 700px;
+  }
+}
 
-// @keyframes slideIn-r-4-mobile {
-//   0% {
-//     background-position: calc(0% - 105px) 525px;
-//   }
-//   100% {
-//     background-position: calc(0% - 175px) 525px;
-//   }
-// }
+@keyframes slideIn-r-4-mobile {
+  0% {
+    background-position: calc(0% - 350px) 700px;
+  }
+  100% {
+    background-position: calc(0% - 350px) 700px;
+  }
+}

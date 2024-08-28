@@ -4,6 +4,7 @@
   flex-direction: column;
   overflow: hidden;
   transition: all 0.3s ease;
+  min-height: calc(100vh - 76px - 190px);
 }
 .common-template .home-tab {
   display: flex;

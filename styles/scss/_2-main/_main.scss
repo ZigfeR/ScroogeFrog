@@ -3,6 +3,7 @@
   flex-direction: column;
   overflow: hidden;
   transition: all 0.3s ease;
+  min-height: calc(100vh - 76px - 190px);
 
   @import "../_2-main/home";
   @import "../_2-main/services";
