@@ -226,84 +226,39 @@ ul {
   }
 }
 
-@-webkit-keyframes slideIn-1 {
-  0% {
-    background-position: calc(100% + 250px) 0;
-  }
-  100% {
-    background-position: calc(100% + 0px) 0;
-  }
-}
-
 @keyframes slideIn-1 {
   0% {
-    background-position: calc(100% + 250px) 0;
+    background-position: calc(100% - 250px) 0;
   }
   100% {
-    background-position: calc(100% + 0px) 0;
-  }
-}
-
-@-webkit-keyframes slideIn-2 {
-  0% {
-    background-position: calc(100% + 250px) 0;
-  }
-  100% {
-    background-position: calc(100% + 150px) 0;
+    background-position: calc(100% - 250px) 0;
   }
 }
 
 @keyframes slideIn-2 {
   0% {
-    background-position: calc(100% + 250px) 0;
+    background-position: calc(100% - 100px) 0;
   }
   100% {
-    background-position: calc(100% + 150px) 0;
-  }
-}
-
-@-webkit-keyframes slideIn-3 {
-  0% {
-    background-position: calc(100% + 250px) 0;
-  }
-  100% {
-    background-position: calc(100% + 300px) 0;
+    background-position: calc(100% - 100px) 0;
   }
 }
 
 @keyframes slideIn-3 {
   0% {
-    background-position: calc(100% + 250px) 0;
+    background-position: calc(100% + 50px) 0;
   }
   100% {
-    background-position: calc(100% + 300px) 0;
-  }
-}
-
-@-webkit-keyframes slideIn-4 {
-  0% {
-    background-position: calc(100% + 250px) 0;
-  }
-  100% {
-    background-position: calc(100% + 450px) 0;
+    background-position: calc(100% + 50px) 0;
   }
 }
 
 @keyframes slideIn-4 {
   0% {
-    background-position: calc(100% + 250px) 0;
+    background-position: calc(100% + 200px) 0;
   }
   100% {
-    background-position: calc(100% + 450px) 0;
-  }
-}
-
-@-webkit-keyframes slideIn-r-1 {
-  0% {
-    background-position: calc(0% - 325px) 950px;
-  }
-  100% {
-    background-position: calc(0% - 525px) 950px;
+    background-position: calc(100% + 200px) 0;
   }
 }
 
@@ -316,30 +271,12 @@ ul {
   }
 }
 
-@-webkit-keyframes slideIn-r-2 {
-  0% {
-    background-position: calc(0% - 325px) 950px;
-  }
-  100% {
-    background-position: calc(0% - 375px) 950px;
-  }
-}
-
 @keyframes slideIn-r-2 {
   0% {
     background-position: calc(0% - 325px) 950px;
   }
   100% {
     background-position: calc(0% - 375px) 950px;
-  }
-}
-
-@-webkit-keyframes slideIn-r-3 {
-  0% {
-    background-position: calc(0% - 325px) 950px;
-  }
-  100% {
-    background-position: calc(0% - 225px) 950px;
   }
 }
 
@@ -352,30 +289,12 @@ ul {
   }
 }
 
-@-webkit-keyframes slideIn-r-4 {
-  0% {
-    background-position: calc(0% - 325px) 950px;
-  }
-  100% {
-    background-position: calc(0% - 75px) 950px;
-  }
-}
-
 @keyframes slideIn-r-4 {
   0% {
     background-position: calc(0% - 325px) 950px;
   }
   100% {
     background-position: calc(0% - 75px) 950px;
-  }
-}
-
-@-webkit-keyframes slideIn-1-mobile {
-  0% {
-    background-position: calc(100% + 70px) 0;
-  }
-  100% {
-    background-position: calc(100% + 0px) 0;
   }
 }
 
@@ -388,15 +307,6 @@ ul {
   }
 }
 
-@-webkit-keyframes slideIn-2-mobile {
-  0% {
-    background-position: calc(100% + 70px) 0;
-  }
-  100% {
-    background-position: calc(100% + 135px) 0;
-  }
-}
-
 @keyframes slideIn-2-mobile {
   0% {
     background-position: calc(100% + 70px) 0;
@@ -406,30 +316,12 @@ ul {
   }
 }
 
-@-webkit-keyframes slideIn-r-3-mobile {
-  0% {
-    background-position: calc(0% - 105px) 525px;
-  }
-  100% {
-    background-position: calc(0% - 40px) 525px;
-  }
-}
-
 @keyframes slideIn-r-3-mobile {
   0% {
     background-position: calc(0% - 105px) 525px;
   }
   100% {
     background-position: calc(0% - 40px) 525px;
-  }
-}
-
-@-webkit-keyframes slideIn-r-4-mobile {
-  0% {
-    background-position: calc(0% - 105px) 525px;
-  }
-  100% {
-    background-position: calc(0% - 175px) 525px;
   }
 }
 

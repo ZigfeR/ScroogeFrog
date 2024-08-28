@@ -143,7 +143,7 @@
       z-index: 10;
 
       .img-bottom-bg {
-        background-image: url("/images/img-bottom.jpg");
+        background-image: url("./../../images/img-bottom.jpg");
         background-size: 200%; /* Увеличивает изображение на 150% */
         background-position: 52% 36%; /* Фокусируется на верхнем левом углу изображения */
 
@@ -182,7 +182,7 @@
       z-index: 10;
 
       .img-right-bg {
-        background-image: url("/images/img-right.jpg");
+        background-image: url("./../../images/img-right.jpg");
         background-size: 200%; /* Увеличивает изображение на 150% */
         background-position: 53% 32%; /* Фокусируется на верхнем левом углу изображения */
 
