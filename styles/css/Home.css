@@ -1683,9 +1683,6 @@
   border-radius: 14px;
   height: 244px;
 }
-.common-template .news-tab .news-tab-container .news-tab-content.other-news .news-tab-box.small .news-tab-img-box:hover {
-  box-shadow: 0px 0px 8px 8px #acbd9d;
-}
 @media (max-width: 719px) {
   .common-template .news-tab .news-tab-container .news-tab-content.other-news .news-tab-box.small .news-tab-img-box {
     height: 242px;
