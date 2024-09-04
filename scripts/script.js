@@ -128,8 +128,12 @@ $(document).ready(function () {
           $("body").removeClass("no-scroll");
 
           // Делаем меню активным и разворачиваем его
-          var $menu = $(".header-menu.menu-mobile");
-          $menu.slideUp(500);
+          $(".header-container__crosshair")
+            .removeClass("active")
+            .addClass("deactivating");
+          $(".header__sub-menu-container").removeAttr("style");
+          $(".header__link.services.arrow").removeClass("active");
+          $(".header-menu.menu-mobile").slideUp(300).stop(true, true);
         }
       );
     } else {
@@ -146,11 +150,9 @@ $(document).ready(function () {
   }
 
   // Вызов функции при загрузке страницы
-  $(document).ready(function () {
-    handleMobileMenu();
-    handleSubmenu();
-    adjustBgFillHeight();
-  });
+  handleMobileMenu();
+  handleSubmenu();
+  adjustBgFillHeight();
 
   function adjustBgFillHeight() {
     var windowWidth = $(window).width(); // Получаем ширину окна
@@ -190,50 +192,56 @@ window.addEventListener("DOMContentLoaded", function () {
     if (hash) {
       const targetElement = $(hash); // Находим элемент с этим id
 
-      if ($(window).width() < 720) {
-        if (targetElement.length) {
-          // Сначала раскрываем скрытый блок
-          $(".header__link.services.arrow").removeClass("active");
-          $(".header__sub-menu-container").slideUp(500); // Анимация сворачивания меню
-          // $(".header-menu.menu-mobile").slideUp(500); // Анимация сворачивания меню
-          $(".header-container__crosshair")
-            .removeClass("active")
-            .addClass("deactivating");
-          // $("body").removeClass("no-scroll");
-          $(".services-drop").fadeIn().css("display", "flex");
-          // Показываем целевой элемент
-          targetElement.css("display", "block");
-          $(".services-tab__drop-btn").css("display", "none");
+      if (targetElement.length) {
+        // Сначала раскрываем скрытый блок
+        $(".services-drop").fadeIn().css("display", "flex");
+        // Показываем целевой элемент
+        targetElement.css("display", "block");
+        $(".services-tab__drop-btn").css("display", "none");
 
-          // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
-          setTimeout(() => {
-            $("html, body").animate(
-              {
-                scrollTop: targetElement.offset().top,
-              },
-              200
-            );
-          }, 100);
-        }
-      } else {
-        if (targetElement.length) {
-          // Сначала раскрываем скрытый блок
-          $(".services-drop").fadeIn().css("display", "flex");
-          // Показываем целевой элемент
-          targetElement.css("display", "block");
-          $(".services-tab__drop-btn").css("display", "none");
-
-          // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
-          setTimeout(() => {
-            $("html, body").animate(
-              {
-                scrollTop: targetElement.offset().top,
-              },
-              200
-            );
-          }, 100);
-        }
+        // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
+        setTimeout(() => {
+          $("html, body").animate(
+            {
+              scrollTop: targetElement.offset().top,
+            },
+            200
+          );
+        }, 100);
       }
+      // if ($(window).width() < 720) {
+      //   if (targetElement.length) {
+      //     $(".services-drop").fadeIn().css("display", "flex");
+      //     // $(".header-menu.menu-mobile").slideUp(500, function () {
+      //     //   setTimeout(() => {
+      //     //     $("html, body").animate(
+      //     //       {
+      //     //         scrollTop: targetElement.offset().top,
+      //     //       },
+      //     //       200
+      //     //     );
+      //     //   }, 100);
+      //     // });
+      //   }
+      // } else {
+      //   if (targetElement.length) {
+      //     // Сначала раскрываем скрытый блок
+      //     $(".services-drop").fadeIn().css("display", "flex");
+      //     // Показываем целевой элемент
+      //     targetElement.css("display", "block");
+      //     $(".services-tab__drop-btn").css("display", "none");
+
+      //     // Принудительно скроллим к целевому элементу с небольшим тайм-аутом
+      //     setTimeout(() => {
+      //       $("html, body").animate(
+      //         {
+      //           scrollTop: targetElement.offset().top,
+      //         },
+      //         200
+      //       );
+      //     }, 100);
+      //   }
+      // }
     }
   }
 
@@ -242,4 +250,32 @@ window.addEventListener("DOMContentLoaded", function () {
 
   // Отслеживаем изменения хэша
   window.addEventListener("hashchange", handleHashChange);
+});
+
+$(document).ready(function () {
+  // Обработка события прокрутки
+  $(window).on("scroll", function () {
+    // Получение текущей позиции прокрутки
+    var scrollPosition = $(this).scrollTop();
+    // Получение элемента "назад к началу"
+    var $backToTop = $("#back-to-top");
+    // Вычисление 50% ширины экрана в пикселях
+    var vw50 = $(window).width() / 2;
+
+    // Добавление/удаление класса видимости для кнопки "назад к началу"
+    if (scrollPosition > vw50) {
+      $backToTop.addClass("visible");
+      $("#back-to-top").css("bottom", "76px");
+    } else {
+      $backToTop.removeClass("visible");
+    }
+  });
+
+  // Обработка клика по кнопке "назад к началу"
+  $("#back-to-top").on("click", function (event) {
+    // Предотвращение стандартного поведения
+    event.preventDefault();
+    // Плавная прокрутка к началу страницы
+    $("html, body").animate({ scrollTop: 0 }, "smooth");
+  });
 });

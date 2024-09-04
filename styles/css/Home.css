@@ -50,7 +50,6 @@
 .common-template .home-tab .home-tab-container .home-tab-content .home-tab-box {
   display: flex;
   flex-direction: column;
-  gap: 40px;
 }
 @media (max-width: 850px) {
   .common-template .home-tab .home-tab-container .home-tab-content .home-tab-box {
@@ -65,6 +64,9 @@
   font-size: 18px;
   line-height: 180%;
   text-align: justify;
+}
+.common-template .home-tab .home-tab-container .home-tab-content .home-tab-box .home-tab__p .home-tab__color {
+  color: var(--link-hover, rgb(129, 189, 82));
 }
 @media (max-width: 850px) {
   .common-template .home-tab .home-tab-container .home-tab-content .home-tab-box .home-tab__p {

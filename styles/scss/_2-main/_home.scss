@@ -43,7 +43,7 @@
       .home-tab-box {
         display: flex;
         flex-direction: column;
-        gap: 40px;
+        // gap: 40px;
 
         @media (max-width: 850px) {
           gap: 24px;
@@ -57,6 +57,10 @@
           font-size: 18px;
           line-height: 180%;
           text-align: justify;
+
+          .home-tab__color {
+            color: var(--link-hover, rgb(129, 189, 82));
+          }
 
           @media (max-width: 850px) {
             font-size: 16px;
